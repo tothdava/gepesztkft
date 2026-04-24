@@ -1,33 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gépész T Kft.</title>
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gépész T Kft.</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header class="hero">
-  <nav class="nav"><a href="/">KEZDŐLAP</a><span>/</span><a href="/eu-tamogatas/">EU TÁMOGATÁS</a></nav>
-  <h1>Gépész T Kft.</h1>
-</header>
-<main class="wrap home-main">
-  <section class="contact">
-    <p><b>Email:</b> gepeszt.kft.hu@gmail.com</p>
-    <p><b>Profilunk:</b> Forgácsolás</p>
-    <p class="counter-title">Látogatás számláló:</p>
-    <div class="counter">
-      <img alt="Látogatás számláló" src="https://hits.sh/gepesztkft.hu.svg?view=total&style=flat-square&label=Visitors&extraCount=174&color=999999&labelColor=eeeeee">
-      <noscript><span class="counter-fallback"><span>Visitors</span><strong>174</strong></span></noscript>
-    </div>
-  </section>
-  <aside>
-    <img class="logo-corner" src="assets/szechenyi2020-300.png" alt="Széchenyi 2020">
-  </aside>
-</main>
-<footer class="footer">
-  <p>Gépész T Kft. 2119 Pécel, Rét utca 6.</p>
-  <p>Az oldalt a Webnode működteti</p>
-</footer>
+
+<div class="header">
+    <div class="menu">KEZDŐLAP / <a href="eu-tamogatas/">EU TÁMOGATÁS</a></div>
+    <h1>Gépész T Kft.</h1>
+</div>
+
+<div class="content">
+<div class="left">
+<p><b>Email:</b> gepeszt.kft.hu@gmail.com</p>
+<p><b>Profilunk:</b> Forgácsolás</p>
+
+<p><b>Látogatás számláló:</b></p>
+
+<div class="counter" id="counter"></div>
+
+</div>
+
+<div class="right">
+<img src="assets/szechenyi.png" class="logo">
+</div>
+</div>
+
+<script>
+let count = localStorage.getItem("visitorCount");
+if(!count){
+    count = 635;
+} else {
+    count = parseInt(count) + 1;
+}
+localStorage.setItem("visitorCount", count);
+
+let str = count.toString().padStart(5,'0');
+let html = "";
+for(let c of str){
+    html += "<span>"+c+"</span>";
+}
+document.getElementById("counter").innerHTML = html;
+</script>
+
 </body>
 </html>

@@ -1,1 +1,39 @@
-*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:#1d2630;background:#fff;font-size:16px;line-height:1.7}.hero{height:510px;background:#0e5b91;position:relative;color:#fff}.nav{position:absolute;top:82px;right:315px;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.2px}.nav a{color:#fff;text-decoration:none}.nav span{padding:0 13px}.hero h1{margin:0;position:absolute;left:0;right:0;top:205px;text-align:center;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:78px;line-height:1;text-shadow:0 2px 0 rgba(0,0,0,.2)}.hero .subtitle{position:absolute;left:0;right:0;top:314px;text-align:center;font-size:18px}.wrap{width:880px;margin:0 auto}.home-main{padding-top:55px;min-height:335px;display:grid;grid-template-columns:1fr 360px;gap:120px;align-items:start}.contact{padding-top:5px}.contact p{margin:0 0 5px 0}.contact b{font-weight:700}.counter-title{margin-top:3px;font-weight:700}.counter{margin-top:26px;height:24px;display:flex;align-items:center}.counter img{height:24px;max-width:145px}.counter-fallback{font-size:13px;display:inline-block;background:#efefef;color:#fff;text-shadow:0 1px 1px #999;border-radius:3px;overflow:hidden}.counter-fallback span{display:inline-block;padding:2px 8px}.counter-fallback strong{display:inline-block;background:#999;color:#fff;padding:2px 7px;font-weight:700}.logo-corner{width:300px;height:auto;display:block}.footer{width:880px;margin:0 auto;border-top:1px solid #dcdcdc;text-align:center;color:#333;font-size:13px;line-height:1.45;padding:25px 0 35px}.footer p{margin:0}.eu-content{width:700px;margin:0 auto;text-align:center;padding-top:43px}.eu-logo{width:300px;height:auto;margin:0 auto 34px;display:block}.eu-content p{margin:0 0 18px 0}.eu-content .lead{font-weight:700;text-align:left;margin:0 auto 38px;max-width:620px;line-height:1.7}.red{color:#ef3b3b;font-weight:700}.project-title{font-size:17px;margin-bottom:8px}.text-left{text-align:left;margin-top:42px}.text-left p{margin-bottom:22px}.sz-link{margin-top:20px;text-align:left}.sz-link a{color:#04e;text-decoration:underline}@media(max-width:900px){.wrap,.footer{width:92%}.hero{height:420px}.nav{right:4%;top:40px}.hero h1{top:170px;font-size:50px}.hero .subtitle{top:245px}.home-main{grid-template-columns:1fr;gap:35px}.logo-corner{margin:auto}.eu-content{width:92%}}
+
+body { font-family: Arial; margin:0; }
+.header {
+    background:#1e5a8a;
+    color:white;
+    text-align:center;
+    padding:40px 0;
+}
+.menu {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+.content {
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+}
+.left p { margin:6px 0; }
+
+.counter span {
+    display:inline-block;
+    background:#eee;
+    padding:5px 8px;
+    margin-right:2px;
+    border:1px solid #ccc;
+    font-family:monospace;
+}
+
+.logo { width:300px; }
+
+.eu-container {
+    display:flex;
+    gap:40px;
+    padding:40px;
+    align-items:flex-start;
+}
+
+.red { color:red; }
