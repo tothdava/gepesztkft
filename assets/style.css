@@ -1,39 +1,251 @@
 
-body { font-family: Arial; margin:0; }
-.header {
-    background:#1e5a8a;
-    color:white;
-    text-align:center;
-    padding:40px 0;
-}
-.menu {
-    position:absolute;
-    right:20px;
-    top:20px;
-}
-.content {
-    display:flex;
-    justify-content:space-between;
-    padding:40px;
-}
-.left p { margin:6px 0; }
-
-.counter span {
-    display:inline-block;
-    background:#eee;
-    padding:5px 8px;
-    margin-right:2px;
-    border:1px solid #ccc;
-    font-family:monospace;
+* {
+    box-sizing: border-box;
 }
 
-.logo { width:300px; }
-
-.eu-container {
-    display:flex;
-    gap:40px;
-    padding:40px;
-    align-items:flex-start;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.red { color:red; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+    font-size: 16px;
+}
+
+/* stronger Webnode-like blue */
+.hero {
+    position: relative;
+    background: #145f97;
+    height: 300px;
+    color: #fff;
+}
+
+.hero.small {
+    height: 300px;
+}
+
+.nav {
+    position: absolute;
+    top: 42px;
+    right: 220px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    color: #fff;
+}
+
+.nav a.active,
+.nav a.purple {
+    color: #6b2d8f;
+}
+
+.hero h1 {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 128px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.hero.small h1 {
+    top: 113px;
+    font-size: 48px;
+}
+
+.hero .subtitle {
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.home-main {
+    width: 920px;
+    margin: 0 auto;
+    min-height: 470px;
+    position: relative;
+    padding-top: 62px;
+}
+
+.home-info {
+    width: 300px;
+    margin-left: 0;
+    color: #3b3b3b;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.home-info p {
+    margin: 0 0 8px 0;
+}
+
+.home-info .counter-label {
+    margin-top: 38px;
+    margin-bottom: 18px;
+}
+
+.logo-home {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    width: 300px;
+    height: auto;
+}
+
+.footer {
+    width: 920px;
+    margin: 30px auto 0 auto;
+    border-top: 1px solid #ddd;
+    padding: 28px 0 35px 0;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Pixel-like old visitor counter, but updated by JS */
+.pixel-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pixel-counter .digit {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 22px;
+    background: linear-gradient(#fafafa, #e7e7e7);
+    border: 1px solid #d4d4d4;
+    color: #777;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1;
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+/* EU page */
+.eu-main {
+    width: 1040px;
+    margin: 0 auto;
+    padding-top: 38px;
+    min-height: 620px;
+}
+
+.eu-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 45px;
+}
+
+.logo-eu {
+    width: 300px;
+    height: auto;
+    flex: 0 0 auto;
+    margin-left: 55px;
+    margin-top: 0;
+}
+
+.eu-intro {
+    width: 650px;
+    padding-top: 16px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+}
+
+.eu-centered {
+    width: 650px;
+    margin-left: 400px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #222;
+}
+
+.red {
+    color: #ff2525;
+    font-weight: bold;
+}
+
+.eu-desc {
+    width: 650px;
+    margin-left: 400px;
+    margin-top: 35px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.eu-desc-title {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+a {
+    color: #0044cc;
+}
+
+@media (max-width: 900px) {
+    .hero, .hero.small {
+        height: 260px;
+    }
+    .hero h1, .hero.small h1 {
+        font-size: 40px;
+        top: 120px;
+    }
+    .nav {
+        right: 20px;
+        top: 20px;
+    }
+    .home-main, .footer, .eu-main {
+        width: calc(100% - 40px);
+    }
+    .home-main {
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+    .logo-home {
+        position: static;
+        display: block;
+        margin: 40px auto 0 auto;
+        width: 280px;
+    }
+    .eu-top-row {
+        display: block;
+    }
+    .logo-eu,
+    .eu-intro,
+    .eu-centered,
+    .eu-desc {
+        width: 100%;
+        margin-left: 0;
+    }
+    .logo-eu {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto 25px auto;
+    }
+}

@@ -8,42 +8,54 @@
 </head>
 <body>
 
-<div class="header">
-    <div class="menu">KEZDŐLAP / <a href="eu-tamogatas/">EU TÁMOGATÁS</a></div>
+<header class="hero">
+    <nav class="nav">
+        KEZDŐLAP&nbsp;&nbsp;/&nbsp;&nbsp;<a href="eu-tamogatas/">EU TÁMOGATÁS</a>
+    </nav>
     <h1>Gépész T Kft.</h1>
-</div>
+</header>
 
-<div class="content">
-<div class="left">
-<p><b>Email:</b> gepeszt.kft.hu@gmail.com</p>
-<p><b>Profilunk:</b> Forgácsolás</p>
+<main class="home-main">
+    <section class="home-info">
+        <p><strong>Email:</strong> gepeszt.kft.hu@gmail.com</p>
+        <p><strong>Profilunk:</strong> Forgácsolás</p>
 
-<p><b>Látogatás számláló:</b></p>
+        <p class="counter-label"><strong>Látogatás számláló:</strong></p>
+        <div id="visitor-counter" class="pixel-counter" aria-label="Látogatás számláló"></div>
+    </section>
 
-<div class="counter" id="counter"></div>
+    <img class="logo-home" src="assets/szechenyi2020-300.png" alt="Széchenyi 2020">
+</main>
 
-</div>
-
-<div class="right">
-<img src="assets/szechenyi.png" class="logo">
-</div>
-</div>
+<footer class="footer">
+    <div>Gépész T Kft. 2119 Pécel, Rét utca 6.</div>
+    <div>Az oldalt a Webnode működteti</div>
+</footer>
 
 <script>
-let count = localStorage.getItem("visitorCount");
-if(!count){
-    count = 635;
-} else {
-    count = parseInt(count) + 1;
-}
-localStorage.setItem("visitorCount", count);
+(function () {
+    const startValue = 635;
+    const key = "gepeszt_visit_counter_v4";
+    let value = Number(localStorage.getItem(key));
 
-let str = count.toString().padStart(5,'0');
-let html = "";
-for(let c of str){
-    html += "<span>"+c+"</span>";
-}
-document.getElementById("counter").innerHTML = html;
+    if (!value || value < startValue) {
+        value = startValue;
+    } else {
+        value += 1;
+    }
+
+    localStorage.setItem(key, String(value));
+
+    const padded = String(value).padStart(5, "0");
+    const container = document.getElementById("visitor-counter");
+    container.innerHTML = "";
+    for (const ch of padded) {
+        const span = document.createElement("span");
+        span.className = "digit";
+        span.textContent = ch;
+        container.appendChild(span);
+    }
+})();
 </script>
 
 </body>
