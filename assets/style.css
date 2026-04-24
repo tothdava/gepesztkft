@@ -1,0 +1,39 @@
+
+body { font-family: Arial; margin:0; }
+.header {
+    background:#1e5a8a;
+    color:white;
+    text-align:center;
+    padding:40px 0;
+}
+.menu {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+.content {
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+}
+.left p { margin:6px 0; }
+
+.counter span {
+    display:inline-block;
+    background:#eee;
+    padding:5px 8px;
+    margin-right:2px;
+    border:1px solid #ccc;
+    font-family:monospace;
+}
+
+.logo { width:300px; }
+
+.eu-container {
+    display:flex;
+    gap:40px;
+    padding:40px;
+    align-items:flex-start;
+}
+
+.red { color:red; }
