@@ -1,62 +1,38 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gépész T Kft.</title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
 
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="assets/style.css"></head>
+<body>
 <header class="hero">
-    <nav class="nav">
-        KEZDŐLAP&nbsp;&nbsp;/&nbsp;&nbsp;<a href="eu-tamogatas/">EU TÁMOGATÁS</a>
-    </nav>
-    <h1>Gépész T Kft.</h1>
+<div class="nav">KEZDŐLAP / <a href="eu-tamogatas/">EU TÁMOGATÁS</a></div>
+<h1>Gépész T Kft.</h1>
 </header>
 
 <main class="home-main">
-    <section class="home-info">
-        <p><strong>Email:</strong> gepeszt.kft.hu@gmail.com</p>
-        <p><strong>Profilunk:</strong> Forgácsolás</p>
+<div class="home-info">
+<p><b>Email:</b> gepeszt.kft.hu@gmail.com</p>
+<p><b>Profilunk:</b> Forgácsolás</p>
+<p class="counter-label"><b>Látogatás számláló:</b></p>
+<div id="counter" class="pixel-counter"></div>
+</div>
 
-        <p class="counter-label"><strong>Látogatás számláló:</strong></p>
-        <div id="visitor-counter" class="pixel-counter" aria-label="Látogatás számláló"></div>
-    </section>
-
-    <img class="logo-home" src="assets/szechenyi2020-300.png" alt="Széchenyi 2020">
+<img class="logo-home" src="assets/szechenyi2020-300.png">
 </main>
 
 <footer class="footer">
-    <div>Gépész T Kft. 2119 Pécel, Rét utca 6.</div>
-    <div>Az oldalt a Webnode működteti</div>
+Gépész T Kft. 2119 Pécel, Rét utca 6.<br>Az oldalt a Webnode működteti
 </footer>
 
 <script>
-(function () {
-    const startValue = 635;
-    const key = "gepeszt_visit_counter_v4";
-    let value = Number(localStorage.getItem(key));
-
-    if (!value || value < startValue) {
-        value = startValue;
-    } else {
-        value += 1;
-    }
-
-    localStorage.setItem(key, String(value));
-
-    const padded = String(value).padStart(5, "0");
-    const container = document.getElementById("visitor-counter");
-    container.innerHTML = "";
-    for (const ch of padded) {
-        const span = document.createElement("span");
-        span.className = "digit";
-        span.textContent = ch;
-        container.appendChild(span);
-    }
-})();
+let v=localStorage.getItem("c6");
+v=v?parseInt(v)+1:635;
+localStorage.setItem("c6",v);
+let s=String(v).padStart(5,"0");
+let c=document.getElementById("counter");
+s.split("").forEach(d=>{
+let e=document.createElement("div");
+e.className="digit";e.innerText=d;c.appendChild(e);
+});
 </script>
 
-</body>
-</html>
+</body></html>
