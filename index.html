@@ -1,38 +1,53 @@
-
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><link rel="stylesheet" href="assets/style.css"></head>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gépész T Kft.</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
 <body>
-<header class="hero">
-<div class="nav">KEZDŐLAP / <a href="eu-tamogatas/">EU TÁMOGATÁS</a></div>
-<h1>Gépész T Kft.</h1>
+
+<header class="site-header home">
+  <nav class="top-nav">KEZDŐLAP&nbsp;&nbsp;/&nbsp;&nbsp;<a href="eu-tamogatas/">EU TÁMOGATÁS</a></nav>
+  <h1 class="site-title">Gépész T Kft.</h1>
 </header>
 
-<main class="home-main">
-<div class="home-info">
-<p><b>Email:</b> gepeszt.kft.hu@gmail.com</p>
-<p><b>Profilunk:</b> Forgácsolás</p>
-<p class="counter-label"><b>Látogatás számláló:</b></p>
-<div id="counter" class="pixel-counter"></div>
-</div>
+<main class="page home-content">
+  <section class="home-info">
+    <p><strong>Email:</strong> gepeszt.kft.hu@gmail.com</p>
+    <p><strong>Profilunk:</strong> Forgácsolás</p>
 
-<img class="logo-home" src="assets/szechenyi2020-300.png">
+    <p class="counter-title"><strong>Látogatás számláló:</strong></p>
+    <div id="visitor-counter" class="counter"></div>
+  </section>
+
+  <img class="logo-home" src="assets/szechenyi2020-300.png" alt="Széchenyi 2020">
 </main>
 
 <footer class="footer">
-Gépész T Kft. 2119 Pécel, Rét utca 6.<br>Az oldalt a Webnode működteti
+  <div>Gépész T Kft. 2119 Pécel, Rét utca 6.</div>
 </footer>
 
 <script>
-let v=localStorage.getItem("c6");
-v=v?parseInt(v)+1:635;
-localStorage.setItem("c6",v);
-let s=String(v).padStart(5,"0");
-let c=document.getElementById("counter");
-s.split("").forEach(d=>{
-let e=document.createElement("div");
-e.className="digit";e.innerText=d;c.appendChild(e);
-});
+(function () {
+  const start = 635;
+  const key = "gepeszt_counter_v7";
+  let val = Number(localStorage.getItem(key));
+  if (!val || val < start) val = start;
+  else val += 1;
+  localStorage.setItem(key, String(val));
+
+  const s = String(val).padStart(5, "0");
+  const box = document.getElementById("visitor-counter");
+  box.innerHTML = "";
+  for (const ch of s) {
+    const span = document.createElement("span");
+    span.textContent = ch;
+    box.appendChild(span);
+  }
+})();
 </script>
 
-</body></html>
+</body>
+</html>
