@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gépész T Kft.</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header home">
+  <nav class="top-nav">KEZDŐLAP&nbsp;&nbsp;/&nbsp;&nbsp;<a href="eu-tamogatas/">EU TÁMOGATÁS</a></nav>
+  <h1 class="site-title">Gépész T Kft.</h1>
+</header>
+
+<main class="page home-content">
+  <section class="home-info">
+    <p><strong>Email:</strong> gepeszt.kft.hu@gmail.com</p>
+    <p><strong>Profilunk:</strong> Forgácsolás</p>
+
+    <p class="counter-title"><strong>Látogatás számláló:</strong></p>
+    <div id="visitor-counter" class="counter"></div>
+  </section>
+
+  <img class="logo-home" src="assets/szechenyi2020-300.png" alt="Széchenyi 2020">
+</main>
+
+<footer class="footer">
+  <div>Gépész T Kft. 2119 Pécel, Rét utca 6.</div>
+</footer>
+
+<script>
+(function () {
+  const start = 635;
+  const key = "gepeszt_counter_v7";
+  let val = Number(localStorage.getItem(key));
+  if (!val || val < start) val = start;
+  else val += 1;
+  localStorage.setItem(key, String(val));
+
+  const s = String(val).padStart(5, "0");
+  const box = document.getElementById("visitor-counter");
+  box.innerHTML = "";
+  for (const ch of s) {
+    const span = document.createElement("span");
+    span.textContent = ch;
+    box.appendChild(span);
+  }
+})();
+</script>
+
+</body>
+</html>

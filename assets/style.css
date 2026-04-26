@@ -1,0 +1,301 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #fff;
+  font-size: 16px;
+}
+
+/* --- Header --- */
+.site-header {
+  position: relative;
+  height: 300px;
+  background: #075a9b;
+  color: #fff;
+}
+
+.site-header.home {
+  height: 310px;
+}
+
+.top-nav {
+  position: absolute;
+  top: 45px;
+  right: 210px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav .visited {
+  color: #7b2d8f;
+}
+
+.site-title {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 66px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 3px 0 rgba(0,0,0,0.18);
+}
+
+.site-header.eu .site-title {
+  top: 100px;
+  font-size: 56px;
+}
+
+.subtitle {
+  position: absolute;
+  top: 172px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* --- Shared layout --- */
+.page {
+  width: 920px;
+  margin: 0 auto;
+}
+
+/* --- Home --- */
+.home-content {
+  position: relative;
+  height: 520px;
+  padding-top: 55px;
+}
+
+.home-info {
+  margin-left: 30px;
+  width: 320px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.home-info p {
+  margin: 0 0 8px 0;
+}
+
+.home-info strong {
+  color: #444;
+}
+
+.counter-title {
+  margin-top: 45px !important;
+  margin-bottom: 22px !important;
+}
+
+.counter {
+  display: inline-flex;
+  gap: 1px;
+}
+
+.counter span {
+  width: 18px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#fafafa, #eeeeee);
+  border: 1px solid #dedede;
+  color: #777;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.logo-home {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  width: 300px;
+  height: auto;
+}
+
+.footer {
+  width: 920px;
+  margin: 0 auto;
+  border-top: 1px solid #d8d8d8;
+  padding: 28px 0 34px 0;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* --- EU page --- */
+.eu-page {
+  width: 920px;
+  margin: 0 auto;
+  padding-top: 38px;
+}
+
+.eu-top {
+  position: relative;
+  height: 260px;
+}
+
+.eu-logo {
+  position: absolute;
+  top: 40px;
+  right: -40px;
+
+  width: auto;       /* EZ A LÉNYEG */
+  height: auto;      /* EZ IS */
+
+  max-width: none;   /* biztos ne korlátozza */
+}
+
+.eu-intro {
+  width: 600px;
+  margin-left: 60px;
+  margin-top: -160px;  /* picit feljebb */
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.eu-main-text {
+  width: 620px;
+  margin: 18px auto 0 auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.eu-main-text p {
+  margin: 0 0 8px 0;
+}
+
+.red {
+  color: #ff2222;
+  font-weight: bold;
+}
+
+.support-sum {
+  margin-top: 22px !important;
+  line-height: 1.5;
+}
+
+.project-title {
+  margin-top: 50px !important;
+  margin-bottom: 24px !important;
+}
+
+.eu-description {
+  width: 620px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.eu-description p {
+  margin: 0 0 17px 0;
+}
+
+.eu-description a {
+  color: #0044cc;
+}
+
+/* responsive fallback */
+@media (max-width: 980px) {
+  .page, .footer, .eu-page {
+    width: calc(100% - 40px);
+  }
+
+  .top-nav {
+    right: 25px;
+    top: 25px;
+  }
+
+  .site-title,
+  .site-header.eu .site-title {
+    font-size: 44px;
+  }
+
+  .home-content {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .logo-home {
+    position: static;
+    display: block;
+    margin: 40px auto 0 auto;
+  }
+
+  .home-info {
+    margin-left: 0;
+  }
+
+  .eu-top {
+    height: auto;
+  }
+
+  .eu-logo {
+    position: static;
+    display: block;
+    margin: 0 auto 35px auto;
+  }
+
+  .eu-intro,
+  .eu-main-text,
+  .eu-description {
+    width: 100%;
+  }
+}
+
+
+/* ==== V8 FINOMHANGOLÁS ==== */
+
+.eu-intro {
+  width: 600px;
+  margin-left: 110px;
+  margin-top: -110px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.eu-main-text {
+  margin-top: 80px;
+  line-height: 1.4;
+}
+
+.eu-logo {
+  position: absolute;
+  top: 30px;
+  right: -70px;
+  width: 300px;
+}
+
+.red {
+  color: #c0392b; /* mattabb piros */
+}
+
