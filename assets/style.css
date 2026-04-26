@@ -172,7 +172,7 @@ body {
 .eu-intro {
   width: 600px;
   margin-left: 60px;
-  margin-top: -120px;  /* picit feljebb */
+  margin-top: -160px;  /* picit feljebb */
   font-weight: bold;
   font-size: 15px;
   line-height: 1.5;
@@ -202,7 +202,7 @@ body {
 }
 
 .project-title {
-  margin-top: 34px !important;
+  margin-top: 50px !important;
   margin-bottom: 24px !important;
 }
 
