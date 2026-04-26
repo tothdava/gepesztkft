@@ -160,15 +160,15 @@ body {
 
 .eu-logo {
   position: absolute;
-  top: 60px;
-  right: 40px;   /* EZT növeljük */
-  width: 320px;
+  top: 40px;     /* picit feljebb */
+  right: -40px;  /* EZ A LÉNYEG – kitoljuk jobbra a képernyő szélé felé */
+  width: 340px;  /* opcionálisan picit nagyobb */
 }
 
 .eu-intro {
   width: 600px;
-  margin-left: 100px;
-  margin-top: -60px;  /* picit feljebb */
+  margin-left: 60px;
+  margin-top: -80px;  /* picit feljebb */
   font-weight: bold;
   font-size: 15px;
   line-height: 1.5;
