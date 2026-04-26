@@ -167,12 +167,13 @@ body {
 }
 
 .eu-intro {
-  width: 620px;
-  margin: 0 auto;
-  padding-top: 0;
+  width: 600px;
+  margin: 0;
+  margin-left: 120px;   /* balra tolás */
+  margin-top: -40px;    /* feljebb húzás */
   font-weight: bold;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.5;
   text-align: left;
 }
 
