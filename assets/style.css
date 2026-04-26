@@ -160,9 +160,13 @@ body {
 
 .eu-logo {
   position: absolute;
-  top: 40px;     /* picit feljebb */
-  right: -40px;  /* EZ A LÉNYEG – kitoljuk jobbra a képernyő szélé felé */
-  width: 340px;  /* opcionálisan picit nagyobb */
+  top: 40px;
+  right: -40px;
+
+  width: auto;       /* EZ A LÉNYEG */
+  height: auto;      /* EZ IS */
+
+  max-width: none;   /* biztos ne korlátozza */
 }
 
 .eu-intro {
