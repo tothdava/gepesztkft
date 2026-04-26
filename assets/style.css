@@ -160,17 +160,15 @@ body {
 
 .eu-logo {
   position: absolute;
-  top: 0;
-  right: 95px;
-  width: 300px;
-  height: auto;
+  top: 60px;
+  right: 40px;   /* EZT növeljük */
+  width: 320px;
 }
 
 .eu-intro {
   width: 600px;
-  margin: 0;
-  margin-left: 120px;   /* balra tolás */
-  margin-top: -40px;    /* feljebb húzás */
+  margin-left: 100px;
+  margin-top: -60px;  /* picit feljebb */
   font-weight: bold;
   font-size: 15px;
   line-height: 1.5;
