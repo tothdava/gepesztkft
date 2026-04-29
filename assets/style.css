@@ -271,31 +271,157 @@ body {
 }
 
 
-/* ==== V8 FINOMHANGOLÁS ==== */
+/* ==== V9 pályázati/arculati finomhangolás ==== */
+.red { color: #c94b4b !important; }
 
 .eu-intro {
-  width: 600px;
-  margin-left: 110px;
-  margin-top: -110px;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 1.5;
-  text-align: left;
+  width: 600px !important;
+  margin-left: 105px !important;
+  margin-top: -105px !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
 }
 
 .eu-main-text {
-  margin-top: 80px;
-  line-height: 1.4;
+  margin-top: 62px !important;
+  line-height: 1.38 !important;
 }
 
-.eu-logo {
-  position: absolute;
-  top: 30px;
-  right: -70px;
-  width: 300px;
+.eu-main-text p {
+  margin-top: 0 !important;
+  margin-bottom: 7px !important;
 }
 
+.support-sum {
+  max-width: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.45 !important;
+}
+
+.eu-logo,
+.logo-eu {
+  width: 300px !important;
+  min-height: 150px !important;
+  height: auto !important;
+  right: -55px !important;
+  top: 28px !important;
+}
+
+.logo-home {
+  width: 300px !important;
+  min-height: 150px !important;
+  height: auto !important;
+}
+
+.compliance-sections {
+  width: 620px;
+  margin: 30px auto 0 auto;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.compliance-sections h2 {
+  font-size: 16px;
+  margin: 24px 0 8px 0;
+  color: #333;
+}
+
+.compliance-sections p {
+  margin: 0 0 12px 0;
+}
+
+
+/* ==== V10 végső tartalmi + arculati javítás ==== */
+
+/* mattabb, régi Webnode-szerű piros */
 .red {
-  color: #c0392b; /* mattabb piros */
+  color: #c84a4a !important;
 }
 
+/* EU oldal intro pontosabb pozíciója */
+.eu-intro {
+  width: 600px !important;
+  margin-left: 105px !important;
+  margin-top: -105px !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  line-height: 1.48 !important;
+  text-align: left !important;
+}
+
+/* Eszközbeszerzés blokk: az eredetihez közelebb, lentebbről induljon */
+.eu-main-text {
+  margin-top: 58px !important;
+  line-height: 1.38 !important;
+}
+
+.eu-main-text p {
+  margin-top: 0 !important;
+  margin-bottom: 7px !important;
+}
+
+/* Hosszú piros támogatási összeg mondat: ne rossz helyen törjön */
+.support-sum {
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.45 !important;
+}
+
+/* Infóblokk - alapeset: eredetihez hasonló helyzet */
+.eu-logo,
+.logo-eu {
+  width: 300px !important;
+  min-height: 150px !important;
+  height: auto !important;
+  right: -55px !important;
+  top: 28px !important;
+}
+
+/* Honlap arculati megfelelőség: görgetés közben is látható jobb oldali infóblokk.
+   Desktopon fixed, kisebb képernyőn visszaáll normál folyásba. */
+@media (min-width: 981px) {
+  .eu-logo,
+  .logo-eu {
+    position: fixed !important;
+    top: 340px !important;
+    right: calc((100vw - 920px) / 2 + 20px) !important;
+    z-index: 10 !important;
+  }
+
+  .logo-home {
+    position: fixed !important;
+    top: 365px !important;
+    right: calc((100vw - 920px) / 2 + 40px) !important;
+    width: 300px !important;
+    min-height: 150px !important;
+    height: auto !important;
+    z-index: 10 !important;
+  }
+}
+
+/* A kötelező 3 projektadat szekció: legyen meg, de ne verje szét az eredeti kinézetet */
+.compliance-sections {
+  width: 620px !important;
+  margin: 28px auto 0 auto !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #444 !important;
+  border-top: 1px solid #e2e2e2 !important;
+  padding-top: 18px !important;
+}
+
+.compliance-sections h2 {
+  font-size: 15px !important;
+  margin: 18px 0 6px 0 !important;
+  color: #444 !important;
+  font-weight: bold !important;
+}
+
+.compliance-sections p {
+  margin: 0 0 10px 0 !important;
+}
