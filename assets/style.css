@@ -425,3 +425,30 @@ body {
 .compliance-sections p {
   margin: 0 0 10px 0 !important;
 }
+
+
+/* ==== V11 apró javítások ==== */
+
+/* A fix infóblokkot sokkal jobbra toljuk, hogy görgetéskor ne takarja a szöveget. */
+@media (min-width: 981px) {
+  .eu-logo,
+  .logo-eu {
+    right: calc((100vw - 920px) / 2 - 230px) !important;
+  }
+
+  .logo-home {
+    right: calc((100vw - 920px) / 2 - 210px) !important;
+  }
+}
+
+/* Nagyon széles képernyőn se ússzon vissza a szöveg fölé. */
+@media (min-width: 1400px) {
+  .eu-logo,
+  .logo-eu {
+    right: 55px !important;
+  }
+
+  .logo-home {
+    right: 75px !important;
+  }
+}
